@@ -1,6 +1,6 @@
-### dockerfiles 
+## dockerfiles for scistack 
 
-Order of images:
+### Order of images:
 
 1. root (using centos 7 base os);
 2. clhep;
@@ -9,11 +9,13 @@ Order of images:
 5. g4env (setting environment variables and building G4MPI);
 6. g4app (modified version of [g4simple](https://github.com/legend-exp/g4simple) );
 
-docker hub:
+`g4app` is an example of how to build custom GEANT4 applications into the existing docker image. 
+
+### docker hub:
 
 `docker pull nmtzwh/scistack`
 
-usages:
+### usages:
 
 ```bash
 # use the bash entry point to test
@@ -26,7 +28,7 @@ docker run -it -v <path-to-input>:/input \
 
 ```
 
-SLURM script for `shifter`:
+### SLURM script for `shifter`:
 
 ```bash
 #!/bin/bash
