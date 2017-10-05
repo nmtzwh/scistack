@@ -29,4 +29,6 @@ COPY code /softwares/app/g4simple/
 RUN cd /softwares/app/g4simple && mkdir build && cd build && \
     CC=mpicc CXX=mpicxx cmake .. && make && cp g4simple /softwares/app/bin
 
+# **important** compile GEANT4 MPI applications with `mpicc` and `mpicxx`, e.g. explicitly set `CC=mpicc CXX=mpicxx` before `cmake`.
+
 
